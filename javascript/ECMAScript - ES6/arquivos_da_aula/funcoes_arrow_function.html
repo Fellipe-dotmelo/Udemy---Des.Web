@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+        /*let quadrado = function(x){
+            return x * x
+        }*/
+
+        /*let quadrado = (x) => {
+            return x * x
+        }*/
+
+        /*let quadrado = x => x * x //return implícito
+        document.write(`O quadrado de X é: `, quadrado(3))
+        */
+
+        /*let ParOuImpar = function(numero){
+            if(numero % 2 === 0){
+                return 'Par'
+            }
+            else{
+                return 'Ímpar'
+            }
+        }*/ //transcrevendo para a arrow function
+
+        /*let ParOuImpar = numero => {
+            if(numero % 2 === 0){
+                return 'Par'
+            }
+            else{
+                return 'Ímpar'
+            }
+        }*/ //transcrevendo para a arrow function com return implícito
+
+        let ParOuImpar = numero => numero % 2 === 0 ? 'Par' : 'Ímpar' //Return Implícito
+        document.write(ParOuImpar(12))
+    </script>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>
