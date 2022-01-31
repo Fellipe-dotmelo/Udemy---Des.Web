@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+        //destructuring
+
+        let produto = {
+            descricao: 'Notebook', 
+            preco: 5000,
+            detalhes: {
+                fabricante: 'Acer',
+                modelo: 'Aspire 3 - A315-42G'
+            }
+        }
+
+        //token variado no destructuring
+        //array => []
+        //objeto => {}
+        //destructuring é quando usa-se as chaves antes de atribuição
+        //let { descricao: d, preco: p } = produto
+        //console.log(`O ${descricao} está ${preco}`)
+
+        let { detalhes: { fabricante: f, modelo: m }} = produto
+        console.log(`O produto da marca ${f} e de modelo ${m}`)
+
+    </script>
+</head>
+<body>
+    <h1>Inspecione</h1>
+    <div id="output"></div>
+</body>
+</html>

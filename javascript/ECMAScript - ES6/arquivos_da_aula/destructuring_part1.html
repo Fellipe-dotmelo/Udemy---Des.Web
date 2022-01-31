@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+        //destructuring
+
+        let frutas = ['Abacaxi', 'Uva', 'Pêra', 'Mamão']
+        //let a = frutas[0] let b = frutas[1] let c = frutas[2]
+
+        //let[a, b, , c] = frutas // virgula sem nada pula índice
+        let [a, b, c, d, e = 'Banana'] = frutas
+
+        //console.log(a, b, c, d, e)
+
+        let coisas = [['Abacaxi', 'Uva', 'Pêra', 'Mamão'], ['José,', 'Maria']]
+        let [ [, , a1],[,n2]] = coisas
+        // extrair o valor de pêra a1
+        //extrair o valor de maria n2
+        console.log(a1, n2)
+
+    </script>
+</head>
+<body>
+    <h1>Inspecione</h1>
+    <div id="output"></div>
+</body>
+</html>
