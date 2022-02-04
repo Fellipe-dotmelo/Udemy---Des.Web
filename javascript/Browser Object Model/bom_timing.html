@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM - Timing</title>
+        <script>
+            ///a lógica abaixo seta um time de 2 segundos e o texto é exibido toda vez que o tempo termina
+            //setTimeout(function()  { document.write('teste') }, 2000)
+        
+        var i = 5
+           var x = setInterval(function(){ document.write(i, '<br/>')
+            i--
+
+            if(i === 0){
+                //window.location.reload() --> recarrega a página
+                clearInterval(x)//fecha o setInterval
+            }
+        }, 1000)
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

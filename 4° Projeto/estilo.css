@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    background: #fff url(imagens/fundo.png) repeat-x;
+}
+
+header{
+    width: 750px;
+    margin: 0 auto;
+}
+
+nav{
+    height: 150px;
+    padding-top: 25px;
+    background: url(imagens/detalhe-topo.png) no-repeat right top;
+}
+
+.logo{
+    width: 152px;
+    height: 66px;
+    background: url(imagens/logo.png) no-repeat center;
+}
+.caixa a:link{
+    color: #b10333;
+    padding: 2px;
+}
+.caixa a:visited{
+    color: #b10333;
+    padding: 2px;
+}
+
+.caixa a:hover{
+    color: #e50040;
+}
+
+nav ul li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: left;    
+}
+
+nav > ul{
+    margin-top: 30px;
+    background-color: #b10333;
+}
+
+ul, a{
+    list-style: none;
+}
+
+ul > a{
+    text-decoration: none;
+    list-style: none;
+}
+
+nav ul a{
+    font-size: 0.9em;
+    display: block;
+    padding: 0.5em 1.4em;
+    line-height: 2.1em;
+    text-decoration: none;
+    color: #fff;
+    background: #b10333 url(imagens/divisor.png) no-repeat left;
+}
+
+nav ul a:hover{
+    color: #69001d;
+}
+
+nav > ul .primeiro{
+    background: none;
+}
+
+body.ativo a.home{
+    color: #fff;
+    background: #de033e;
+    cursor: text;
+}
+
+main{
+    width: 800px;
+    background:#f5f5f5;
+    margin: 60px auto;
+}
+
+#primario{
+    width: 270px;
+    float: left;
+    margin: 0 0 20px 195px;
+}
+
+#primario > .container > h2{
+    background-color: #294C71;
+    color: #fff;
+    font-size: 1em;
+    padding: 5px;
+    margin: 0  0 10px 0;
+}
+
+#uma-col #primario{
+    width: 750px;
+    float: left;
+    margin: 0 0 20px 0;
+}
+
+#uma-col .noticias{
+    width: 750px;
+    float: left;
+    margin: 0 0 20px 0;
+}
+
+#duas-col .noticias {
+    width: 750px;
+    float: left;
+    margin: 0 0 20px 0;
+}
+
+#duas-col #primario{
+        width: 555px;
+        float: left;
+        margin: 0 0 20px 195px;
+}
+
+#primario > .container > div.caixa > img{
+    width: 98%;
+    border: 3px solid #dfdfdf;
+    margin: 5px  0 0 0;
+}
+
+.noticias{
+    float: left;
+    margin-left: 200px;
+}
+
+.noticias-brasil{
+    float: left;
+    margin-left: 200px;
+    width: 300px;
+}
+
+.noticias-direita{
+    float: right;
+    margin-right: 70px;
+}
+
+.container > .noticias-direita > h2{
+    background-color: #294C71;
+    color: #fff;
+    font-size: 1em;
+    padding: 5px;
+    margin: 0  0 10px 0;
+}
+
+.noticias-direita > .container > div.caixa > img{
+    width: 98%;
+    border: 3px solid #dfdfdf;
+    margin: 5px  0 0 0;
+}
+
+
+
+.container > .noticias > h2{
+    background-color: #294C71;
+    color: #fff;
+    font-size: 1em;
+    padding: 5px;
+    margin: 0  0 10px 0;
+}
+
+.noticias > .container > div.caixa > img{
+    width: 98%;
+    border: 3px solid #dfdfdf;
+    margin: 5px  0 0 0;
+}
+
+#lista-noticias li{
+    padding: 2px;
+    border-bottom: 1px solid #ccc;
+    height: 62px;
+}
+
+#lista-noticias li > a > img{
+    margin: 5px;
+    float: left; 
+}
+
+#lista-noticias li > a{
+    text-decoration: none;
+    font-size: 0.8em;
+    color: #000;
+
+}
+
+#lista-noticias li > a > h3{
+    font-size: 1em;
+    padding: 0;
+    color: #3e7ab9;
+}
+
+#lista-noticias li > a > p{
+    font-size: 0.9em;
+}
+
+#lista-noticias li:hover{
+    background: rgb(140, 130, 130);
+    cursor: pointer;
+}
+
+
+
+
+h3{
+    text-transform: uppercase;
+    display: inline;
+    font-size: 0.8em;
+    padding: 3px;
+}
+
+#destaque{
+    background: #b10333;
+    color: #fff;
+    margin-top: 10px;
+}
+
+#entrevista{
+    background: #de033e;
+    color: #000;
+    margin-top: 10px;
+}
+
+#secundario{
+    width: 270px;
+    float: left;
+    margin: 0 0 20px 15px;
+}
+
+#secundario > .container > h2{
+    background-color: #294C71;
+    color: #fff;
+    font-size: 1em;
+    padding: 5px;
+}
+
+#secundario > .container > div.caixa > img{
+    width: 98%;
+    border: 3px solid #dfdfdf;
+    margin: 5px  0 0 0;
+}
+
+#lateral{
+    width: 180px;
+    float: left;
+    margin: 0 0 20px -750px;
+}
+
+.container{
+    padding: 5px 5px;
+    margin: 10px 0;
+    background: #f3f3f3 url(imagens/fundo-caixa.png);
+}
+
+#lateral > .container > h2{
+    background-color: #294C71;
+    color: #fff;
+    font-size: 1em;
+    padding: 5px;
+}
+
+#lateral ul a{
+    font-size: 0.9em;
+    padding: 3px;
+    display: block;
+    line-height: 30px;
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+#lateral ul a:hover{
+    color: #a1a1a1;
+    padding-left: 20px;
+    background: #f9f9f9 url(imagens/marcador.png) no-repeat left;
+}
+
+label{
+    display: block;
+    cursor: pointer;
+}
+
+input{
+    width: 130px;
+    padding: 5px;
+    font-size: 0.9em;
+    background-color: #fff;
+    border:  #fff;
+}
+
+input[type="submit"]{
+    width: 80px;
+    color: #fff;
+    background-color: #b10333;
+    border: 2px solid #870529;
+    padding: 5px;
+}
+
+.caixa{
+    background-color: #fff;
+    padding: 5px 15px;
+    margin-top: 5px;
+}
+
+.caixa-brasil{   
+    background-color: #fff;
+    padding: 5px 15px;
+    margin-top: 5px;
+}
+
+
+footer{
+    background: #294C71;
+    padding: 20px;
+    clear: both;
+    color: #fff;
+    font-weight: 600;
+}
+
+footer > #rodape{
+    width: 750px;
+    margin: 0 auto;
+}

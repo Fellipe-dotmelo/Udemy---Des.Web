@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - ForEach</title>
+    <script>
+        document.write('<h4>Inspecione</h4>')
+
+    
+        var lista_funcionarios = ['Vivian', 'Rosa', 'Miguel', 'Lucas', 'Fernanda']
+        console.log(lista_funcionarios)
+        
+        var f = function(valor, indice){
+            console.log(valor, indice)
+        }
+        
+        lista_funcionarios.forEach(f)
+        
+        
+        /*
+        lista_funcionarios.forEach(function(valor, indice, array){
+          //lógica
+          
+          console.log(`Indice: ${indice} | valor: ${valor}`)
+          console.log(array)
+        })
+        */
+    </script>
+</head>
+    <body>
+    </body>
+</html>

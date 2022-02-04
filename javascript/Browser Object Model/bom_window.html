@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM - Window</title>
+        <script>
+        var janela
+        
+            function abrirPopUp(){
+                janela = window.open('http://www.google.com', 'nova_janela', 'width=450, height=450') 
+            }
+            function FecharPopUp(){
+                janela.close()
+            }
+        </script>
+</head>
+<body>
+    <button onclick="abrirPopUp()">Abrir Janela</button>
+    <button onclick="FecharPopUp()">Fechar Janela</button>
+    <button onclick="window.print()"><img src="https://img.icons8.com/color/48/000000/print.png"/></button>
+</body>
+</html>

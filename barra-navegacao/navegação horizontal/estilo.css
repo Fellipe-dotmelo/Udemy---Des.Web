@@ -1,0 +1,16 @@
+body{
+    background-color: wheat;
+}
+
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 700px;
+    background: #159cb0 url(../naveg-horizontal/imagens/fundo-horizontal.png);
+}
+
+ul > li > a{
+    text-decoration: none;
+}

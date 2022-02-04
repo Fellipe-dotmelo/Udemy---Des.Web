@@ -1,0 +1,97 @@
+body{
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    background: #f2f2f2;
+}
+
+#container{
+    width: 85%;
+    margin: 0 auto;
+    background: #fff url(imagens/coluna.png) repeat-y;
+    min-width: 820px;
+    max-width: 1000px;
+}
+
+header{
+    width: 100%;
+    height: 200px;
+    background:#225999 url(imagens/cabecalho2.jpg);
+    text-align: center;
+    line-height: 200px;
+}
+
+#conteudo{
+    width: 72%;
+    float: right;
+    padding: 1px;
+}
+
+nav{
+    width: 28%;
+    min-height: 23vw;
+    max-height: 23vw;
+    float: left;
+    padding: 1px 4px;
+    position: absolute;
+}
+
+nav ul{
+    margin-top:0px;
+}
+
+nav ul li{
+    list-style: none;
+    background: darkcyan;
+    width: 220px;
+    border: darkgray solid 1px;
+    text-align: center;
+    padding: 20px 1px;
+    margin-left: -44px;
+    font-weight: bold;
+}
+
+nav a{
+    text-decoration: none;
+    color: #000;
+}
+
+nav li:hover{
+    background-color: rgb(48, 48, 102);
+}
+
+nav ul li a:hover{
+    color: #fff;
+    font-weight: bolder;
+}
+
+main{
+    width: 50%;
+    float: left;
+    padding: 5px 5px;
+}
+
+#conteudo-secundario{
+    float: right;
+    width: 36%;
+    background-color: #d1d1d1;
+}
+
+picture img{
+    width: 94%;
+    padding: 2%;
+}
+
+#conteudo-secundario h1,
+#conteudo-secundario h2,
+#conteudo-secundario h3,
+#conteudo-secundario p{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+footer{
+    clear: both;
+    background: #c4c4c4;
+    padding: 5px;
+    text-align: center;
+}
+

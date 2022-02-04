@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Atividade</title>
+        <script>
+                var num1 = parseFloat(prompt("Digite o valor do primeiro número: "))
+                var calculando = prompt("Selecione o que deseja realizar (+: somar), (-: subtrair)")
+                var num2 = parseFloat(prompt("Digite o valor do segundo número: "))
+
+                    function calc(num1, num2, calculando) {
+                        
+                        var resultado = 0
+                        switch (calculando) {
+                            case 'somar':
+                                document.write('<h4>Você optou pela soma<h4/>')
+                                resultado = num1+num2
+                                break;
+                            case 'subtrair':
+                            document.write('<h4>Você optou pela subtração<h4/>')
+                                resultado = num1-num2
+                                break;
+                            default:
+                                break;
+                        }
+                        return resultado
+                    }
+                    document.write(`O resultado é: ${+ calc(num1, num2, calculando)}`)
+        </script>
+</head>
+<body>
+</body>
+</html>

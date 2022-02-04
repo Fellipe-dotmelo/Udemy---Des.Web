@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - DOM: Manipulando classes de elementos</title>
+    <style>
+        /*1) Crie um campo <input type="text"> e aplique os seguintes controles com base nos
+             eventos abaixo:
+
+        • No evento de foco modifique o background do input para amarelo.
+        • Quando o campo perder o foco, recupere o seu respectivo valor e:
+        o Caso o conteúdo contido no campo tenha menos de 3 caracteres o mesmo
+        deve ter seu background alterado para vermelho.
+        o Caso o conteúdo contido no campo tenha 3 caracteres ou mais o background
+        deve ser alterado para verde.*/
+    </style>
+</head>
+<body>
+    <form id="meu_form">
+        <input type="text" id="meu_input">
+    </form>
+    <script>
+        var cor = document.getElementById('meu_form')
+        cor.addEventListener('focusin', amarelado)
+        cor.addEventListener('focusout', semcor)
+
+        //entrar com foco amarelo, ficar sem foco ao sair do input
+        function amarelado() {
+            document.getElementById('meu_input').style.backgroundColor = '#FFFF00'
+        }
+        function semcor() {
+            document.getElementById('meu_input').style.backgroundColor = ''
+        }
+
+        function verde_vermelho(){
+            var valorVerde_vermelho = document.getElementById('meu_input').value
+
+            if(valorVerde_vermelho.length < 3){
+                document.getElementById('meu_input').style.backgroundColor = '#FF0000' 
+            }
+            else{
+                document.getElementById('meu_input').style.backgroundColor = '#008000' 
+
+            }
+        }
+    </script>
+</body>
+</html>

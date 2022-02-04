@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - DOM: Manipulando estilos de elementos</title>
+        <script>
+            function modifica_estilo(corDeFundo){
+                document.getElementById('manipular').style.backgroundColor = corDeFundo
+            }   
+        </script>
+</head>
+<body>
+    <h3>Manipulando o estilo</h3>
+    <button type="button"
+    style="background-color: red; color: white; font-weight: bold; border-radius: 10px; width: 125px; height: 25px;"
+    onclick="modifica_estilo('#FF0000')">
+        Vermelho
+    </button>
+    <button type="button"
+    style="background-color: green; color: white; font-weight: bold;border-radius: 10px; width: 125px; height: 25px;"
+    onclick="modifica_estilo('#00FF00')">
+        Verde
+    </button>
+    <button type="button"
+    style="background-color:blue; color: white; font-weight:bold; border-radius:10px; width:125px; height:25px;"
+    onclick="modifica_estilo('#0000FF')">
+        Azul
+    </button>
+
+    <hr>
+
+    <h4>Escolha a cor do quadro abaixo:</h4>
+
+    <div
+    style="background:#ccc;
+    border: solid 2px black;
+    margin:70px;
+    width: 200px;
+    height: 200px;
+    padding:20px"
+    id="manipular">
+    </div>
+</body>
+</html>

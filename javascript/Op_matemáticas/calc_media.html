@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Casting</title>
+    <script>
+var nota_1 = Number(prompt('Digite sua primeira nota: '))
+var nota_2 = Number(prompt('Digite sua segunda nota: '))
+var nota_3 = Number(prompt('Digite sua terceira nota: '))
+var media = (nota_1 + nota_2 + nota_3)/3
+
+if(media >= 7){
+    document.write('Sua nota foi: ' +media+ '<br> portanto está aprovado.')
+} if(media < 6) {
+    document.write('Sua nota foi: ' +media+ '<br> portanto está reprovado.')
+} if(media == 6){
+document.write('Sua nota foi: ' +media+ '<br> portanto está em recuperação.')
+}
+
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,36 @@
+body{
+    background-color: wheat;
+}
+
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 568px;
+    background: #159cb0 url(../naveg-horizontal/imagens/fundo-horizontal.png) repeat-x;
+    float: left;
+}
+
+ul li{
+    float: left;
+}
+
+ul a{
+    display: block;
+    padding: 0 2em;
+    line-height: 2.2em;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 800;
+    background: url(../naveg-horizontal/imagens/divisor.png) repeat-y;
+}
+
+ul .primeiro a{
+    background: none;
+}
+
+ul a:hover{
+    color: #085662;
+    background: #44cade;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - massa corporal</title>
+        
+<script>
+    var nome = prompt('Digite o seu nome: ')
+    var altura_cm = parseFloat(prompt('Digite sua altura em centímetros: '))
+    var peso = parseFloat(prompt('Digite o seu peso: '))
+
+    altura_cm /100
+    massa = (peso)/ altura_cm**2
+	var classificacao = ''
+
+        if(massa <= 16){
+            document.write('BAIXO PESO - muito grave')
+        }
+            if(massa <= 16 && massa <= 16.99){
+                classificacao ='BAIXO PESO - grave'
+            }
+                if(massa <= 17 && massa <= 18.499){
+                    classificacao ='BAIXO PESO'
+                }
+                    if(massa <= 18.49 && massa <= 24.99){
+                        classificacao ='PESO NORMAL'
+                    }
+                        if(massa < 25 && massa < 29.99){
+                            classificacao ='SOBREPESO'
+                        }
+                            if(massa < 30 && massa < 34.99){
+                                classificacao ='OBESIDADE  GRAU 1'
+                            }
+                                if(massa < 35 && massa < 39.99){
+                                    classificacao ='OBESIDADE  GRAU 2'
+                                }
+                                    if(massa < 40){
+                                        classificacao ='OBESIDADE  GRAU 3'
+                                    }
+
+            document.write(`${nome} possui índice de massa corporal igual a: ${massa}, sendo classificado como: ${classificacao}`)
+</script>
+</head>
+<body>
+    
+</body>
+</html>

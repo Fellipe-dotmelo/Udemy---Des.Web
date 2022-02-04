@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Funções Data</title>
+        <script>
+            var data = new Date()
+            document.write('<h3>Hoje é dia: <h3/>')
+            document.write(data.getDate() +'/'+ (data.getMonth()+1) +'/'+ (data.getFullYear()))
+            document.write('<br /><hr/ >')
+
+            //adicionar/remover dias
+            document.write('<h3>Adicionando e removendo dias<h3/>')
+            document.write(data.toString())
+            data.setDate(data.getDate() + 720)
+            document.write('<hr />')
+            document.write(data.toString())
+            document.write('<br /><hr/ >')
+
+            //adicionar/remover meses
+            document.write('<h3>Adicionando e removendo meses<h3/>')
+            document.write(data.toString())
+            data.setMonth(data.getMonth() -1)
+            document.write('<hr />')
+            document.write(data.toString())
+            document.write('<br /><hr/ >')
+       
+            //adicionar/remover anos
+            document.write('<h3>Adicionando e removendo anos<h3/>')
+            document.write(data.toString())
+            data.setFullYear(data.getFullYear() -1)
+            document.write('<hr />')
+            document.write(data.toString())
+            document.write('<br /><hr/ >')
+       </script>
+</head>
+<body>
+    
+</body>
+</html>
