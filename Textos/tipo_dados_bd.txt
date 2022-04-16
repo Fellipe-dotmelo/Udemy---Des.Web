@@ -1,0 +1,367 @@
+Campos de Texto:
+- text (tamanho variável que armazena uma grande quantidade de caracteres)
+- varchar (tamanho váriavel que armazena de 0 à 255 caracteres) - usar quando for um número fixo (como cpf, uf, rg.. etc)
+- char (tamanho fixo que armazena de 0 à 255 caracteres)
+
+Campos Numéricos:
+- int (valores numéricos inteiros)
+- float (valores numéricos fracionados)
+
+Campos de Data/Hora
+- date (data no formato ano/mês/dia)
+- time (hora)
+- datetime (combinação de data e hora no mesmo campo)
+
+-------------------------------------------------------------------------------------------------------------------------
+Incluindo, editando e removendo colunas de tabelas
+
+ALTER TABLE
+ADD - Permite a inclusão de uma nova coluna em uma tabela;
+CHANGE - Permite a alteração do nome de uma coluna e de suas propriedades, como por exemplo o tipo;
+DROP - Permite a remoção de uma coluna da tabela;
+
+
+-------------------------------------------------------------------------------------------------------------------------
+Operadores AND (e) // OR (ou)
+
+(e)
+SELECT
+	*
+FROM
+	`tb_alunos`
+WHERE
+	interesse = 'Jogos' AND idade > 25 AND estado = 'RN';
+
+- Neste caso, o banco retorna os dois dados, tanto o interesse, idade e estado.
+
+
+(ou)
+SELECT
+	*
+FROM
+	`tb_alunos`
+WHERE
+	interesse = 'Música' OR idade > 25;
+
+- Neste caso, haja uma das duas informações, o banco retornará UMA.
+
+
+(BETWEEN)
+SELECT
+	*
+FROM
+	`tb_alunos`
+WHERE
+	idade BETWEEN 18 AND 25;
+
+- Neste caso, trata-se de um intervalo entre 18 e 25 anos, por exemplo pessoas que estejam entre essas idades.
+
+
+(IN)
+SELECT
+	*
+FROM
+	`tb_alunos`
+WHERE
+	interesse IN('Jogos', 'Música', 'Esporte');
+
+- Neste caso, trata-se de realizar filtros com mais praticidade, com uma longa lista de possibilidades.
+
+
+SELECT
+	*
+FROM
+	`tb_alunos`
+WHERE
+	interesse NOT IN('Jogos', 'Música', 'Esporte');
+
+- Neste caso, trata-se de realizar filtros com mais praticidade, com uma longa lista de possibilidades, porém
+negando os itens listados, trazendo apenas os resultados que não foram inseridos no caso de negação.
+
+-------------------------------------------------------------------------------------------------------------------------
+Select - Filtros com o operador LIKE
+
+Permite realizar filtros com base em uma pesquisa de caracteres dentro de uma coluna textual
+
+Caracters curingas: Percente e Underscore
+% - Indica que pode haver a existência de qualquer conjunto de caracter no texto
+_ - Indica que pode haver a existência de um ou mais caracteres em uma posição específica de texto
+
+(Usando os dois curingas para fazer um filtro mais acertivo)
+SELECT
+	*
+FROM
+	`tb_alunos`
+WHERE
+	nome LIKE '%tt_';
+
+-------------------------------------------------------------------------------------------------------------------------
+Select - Ordenando resultado
+
+SELECT
+	*
+FROM
+	`tb_alunos`
+WHERE
+	idade BETWEEN 18 and 59
+ORDER BY
+	nome ASC, idade DESC, estado ASC;
+
+ASC - Ascendente: do menor para o maior e alfabético
+DESC - Descendente: do maior para o menor e o contrário de alfabético
+
+-------------------------------------------------------------------------------------------------------------------------
+SELECT - Limitando retorno
+
+(limite)
+SELECT
+	*
+FROM
+	`tb_alunos`
+ORDER BY
+	id_aluno DESC
+LIMIT 25;
+
+
+
+(limite e offset)
+SELECT
+	*
+FROM
+	`tb_alunos`
+LIMIT 8, 4;
+
+-------------------------------------------------------------------------------------------------------------------------
+SELECT - Funções de Agregação parte 1: MAX, MIN e AVG
+
+SELECT
+	min, max, avg
+FROM
+	`tb_alunos`
+WHERE
+
+min - Retorna o menor valor de todos os registros com base em uma coluna
+max - Retorna o maior valor de todos os registros com base em uma coluna
+avg - Retorna a média de todos os registros com base em uma coluna
+
+-------------------------------------------------------------------------------------------------------------------------
+SELECT - Funções de Agregação parte 2: SUM e COUNT
+
+SELECT COUNT(*)
+FROM
+	`tb_cursos`
+WHERE
+	ativo = true;
+
+
+SELECT SUM(investimento)
+FROM
+	`tb_cursos`
+WHERE
+	ativo = true;
+
+r=
+SUM(investimento)
+1524.96
+
+Sum - Retorna a soma dos valores de todos os registros com base em uma coluna
+Count - Retorna a quantidade de todos os registros de uma tabela
+
+-------------------------------------------------------------------------------------------------------------------------
+SELECT - Agrupando seleção de registros (GROUP BY)
+
+GROUP BY - Agrupa os registros com base em uma ou mais colunas cujos valores sejam iguais, permite as agragações
+listadas acima
+
+
+
+SELECT
+	estado, COUNT(*) AS total_estados
+FROM
+	`tb_alunos`
+GROUP BY
+	estado;
+
+
+estado	
+total_estados	
+AC
+1
+AL
+8
+AM
+3
+AP
+4
+BA
+2
+CE
+5
+DF
+6
+ES
+5
+GO
+3
+MA
+5
+MG
+3
+MS
+6
+MT
+3
+PA
+9
+PB
+5
+PE
+2
+PI
+2
+PR
+3
+RJ
+4
+RN
+3
+RO
+3
+RR
+4
+RS
+4
+SC
+4
+SE
+1
+
+
+-------------------------------------------------------------------------------------------------------------------------
+SELECT - Filtrando seleções agrupadas (HAVING)
+
+SELECT
+	estado, COUNT(*) AS total_registros_estado
+FROM
+	`tb_alunos`
+GROUP BY
+	estado
+HAVING
+	total_registros_estado >= 5
+
+-------------------------------------------------------------------------------------------------------------------------
+UPDATE - Atualizando registros
+
+UPDATE
+	<tb>
+SET
+	<col> = <valor>, <col> = <valor>, <col> = <valor>
+WHERE
+	<filtro(s)>
+
+UPDATE 
+	tb_alunos
+SET 
+	nome = 'João'
+WHERE
+	id_aluno = 13
+
+- O nome do aluno da coluna 13 foi alterado para João
+
+UPDATE 
+	tb_alunos
+SET 
+	nome = 'João'
+WHERE
+	id_aluno = 13
+
+
+
+UPDATE
+	tb_alunos
+SET
+	nome = 'Maria'
+WHERE
+	idade BETWEEN 18 AND 25 AND estado = 'PA';
+
+- Alterando o nome da pessoa que tem entre 18  e 25 anos e mora no Pará
+
+-------------------------------------------------------------------------------------------------------------------------
+DELETE - Excluindo registros
+
+DELETE FROM
+	<tb>
+WHERE
+	<filtro(s)>
+
+
+
+DELETE FROM
+	`tb_alunos`
+WHERE
+	idade IN(10,18,22,28,34) AND interesse = 'Esporte';
+
+-------------------------------------------------------------------------------------------------------------------------
+Introdução - Relacionamento das Tabelas
+
+Criando tabela com chave primária que se incrementa automaticamente
+
+CREATE TABLE tb_produtos(
+	id_produto INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    produto VARCHAR(200) NOT NULL,
+    valor FLOAT(8,2) NOT NULL
+);
+
+
+Criando tabela com chave estrangeira sendo a de cima
+
+CREATE TABLE tb_descricoes_tecnicas(
+	id_descricao_tecnica INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    id_produto INT NOT NULL,
+    descricao_tecnica TEXT NOT NULL,
+    FOREIGN KEY(id_produto) REFERENCES tb_produtos(id_produto)
+);
+
+Criando a tabela com chave estrangeira baseada na tb_produtos para trazer
+
+o relacionamento
+
+CREATE TABLE tb_imagens(
+	id_imagens INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    id_produto INT NOT NULL,
+    FOREIGN KEY(id_produto) REFERENCES tb_produtos(id_produto),
+    url_imagem VARCHAR(200) NOT NULL
+);
+
+
+
+Criando tabela com relacionamento muito para muitos
+
+CREATE TABLE tb_pedidos(
+	id_pedido INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    id_cliente INT NOT NULL,
+    FOREIGN KEY(id_cliente) REFERENCES tb_clientes(id_cliente),
+    data_hora DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP    
+);
+
+
+Relacioanando muitos para muitos referenciando as chaves externas
+
+CREATE TABLE tb_pedidos_produtos(
+	id_pedido INT NOT NULL,
+    id_produto INT NOT NULL,
+    FOREIGN KEY(id_pedido) REFERENCES tb_pedidos(id_pedido),
+    FOREIGN KEY(id_produto) REFERENCES tb_produtos(id_produto)
+);
+
+
+-------------------------------------------------------------------------------------------------------------------------
+Join - Junção à esquerda (LEFT JOIN)
+
+SELECT
+	*
+FROM
+    tb_clientes LEFT JOIN tb_pedidos ON (tb_clientes.id_cliente = tb_pedidos.id_cliente)
+
+
+

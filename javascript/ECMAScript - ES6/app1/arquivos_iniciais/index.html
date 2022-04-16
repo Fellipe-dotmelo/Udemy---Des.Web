@@ -15,12 +15,8 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
     <script src="app.js"></script>
-
 	</head>
-
   <body>
-
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-5">
       <div class="container">
         <a class="navbar-brand" href="#">
@@ -55,10 +51,7 @@
         <div class="col-md-2">
           <select class="form-control" id="ano">
             <option value="">Ano</option>
-            <option value="2019">2019</option>
-            <option value="2020">2020</option>
-            <option value="2021">2021</option>
-            <option value="2022">2022</option>
+            <option value="2018">2018</option>
           </select>
         </div>
 
@@ -100,11 +93,9 @@
         <div class="col-md-8">
           <input type="text" class="form-control" placeholder="Descrição" id="descricao" />
         </div>
-
         <div class="col-md-2">
           <input type="text" class="form-control" placeholder="Valor" id="valor" />
         </div>
-
         <div class="col-md-2 d-flex justify-content-end">
           <button type="button" class="btn btn-primary" onclick="cadastrarDespesa()">
             <i class="fas fa-plus"></i>
@@ -117,20 +108,19 @@
     <div class="modal fade" id="modalRegistraDespesa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header text-success">
+          <div id="modal_titulo_div">
             <h5 class="modal-title" id="modal_titulo"></h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body" id="modal_conteudo">
-            
-          </div>
+          <div class="modal-body" id="modal_conteudo"></div>
           <div class="modal-footer">
-            <button type="button" data-dismiss="modal" id="modal_botao"></button>
+            <button type="button" data-dismiss="modal" id="modal_btn">Voltar</button>
           </div>
         </div>
       </div>
     </div>
+
   </body>	
 </html>
