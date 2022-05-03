@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <style>
+        #div1, #div2{
+            border: solid 1px #000;
+            width: 150px;
+            height: 150px;
+        }
+    </style>
 
     <!--<script src="jquery-3.6.0.min.js"></script>-->
     <script
@@ -13,17 +20,22 @@
       crossorigin="anonymous"></script>
       <script>
           $(document).ready(() => {
-            console.log($('div').attr('style'))
-          })
+
+            console.log('Conteúdo div 1: ', $('#div1').html())
+            console.log('Conteúdo div 2: ', $('#div2').html())
+            
+        })
       </script>
     <title>jQuery</title>
-  </head>
-  <body>
-    <img src="esfera_1.png" border="3" alt="Esfera de Número 01">
-
-    <div style="background-color: blue; width: 200px; height: 200px;"></div>
-    
-    <input type="text" value="Eu sou um input">
-
-</body>
+    <body>
+        <div id="div1">
+            <a href="#">Teste</a>
+            <p>Esse é outro teste</p>
+            Texto
+            <div>Outro teste</div>
+        </div>
+        <div id="div2">
+            Div 2
+        </div>
+    </body>
 </html>
